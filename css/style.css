@@ -6,7 +6,7 @@
 }
 
 body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   line-height: 1.5;
 }
 
@@ -31,17 +31,17 @@ a {
 
 .btn {
   display: inline-block;
-  padding: .4rem 1.5rem;
+  padding: 0.4rem 1.5rem;
   color: #333;
   text-transform: uppercase;
   font-weight: bold;
-  background-color: #F1C40F;
+  background-color: #f1c40f;
 }
 
 /* HEADER NAVBAR */
 
 #main-header {
-  background-color: #EEEEEE;
+  background-color: #eeeeee;
   color: #333;
 }
 
@@ -49,7 +49,8 @@ a {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: .8rem 2rem;
+  padding: 0.8rem 2rem;
+  overflow: hidden;
 }
 
 #navbar ul {
@@ -67,7 +68,7 @@ a {
 
 .message-box {
   margin: 1.5rem;
-  padding: .8rem;
+  padding: 0.8rem;
   text-align: center;
 }
 
@@ -80,7 +81,7 @@ a {
   display: block;
   margin: auto;
   width: 30%;
-  padding: .4rem;
+  padding: 0.4rem;
   margin-bottom: 1rem;
 }
 
@@ -93,14 +94,13 @@ a {
 }
 
 #features .feature {
-  display: inline-flex;
+  display: flex;
   justify-self: center;
   align-items: center;
-
 }
 
 #features .feature i {
-  color: #FF8C00;
+  color: #ff8c00;
 }
 
 #features .feature div {
@@ -110,7 +110,7 @@ a {
 
 #features .feature div h2 {
   font-size: 1.5rem;
-  margin-bottom: .5rem;
+  margin-bottom: 0.5rem;
 }
 
 #how-it-work {
@@ -119,12 +119,17 @@ a {
   text-align: center;
 }
 
+#how-it-work #video {
+  width: 600px;
+  height: 340px;
+}
+
 #pricing {
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
-  padding: 3rem .2rem;
+  padding: 3rem 0.2rem;
 }
 
 .price-box {
@@ -149,7 +154,6 @@ a {
 
 .price-box h2 {
   padding: 1rem;
-
 }
 
 .price-box p {
@@ -168,14 +172,76 @@ a {
   margin-top: 2rem;
   display: flex;
   justify-content: space-between;
+  overflow: hidden;
 }
 
 #main-footer div a {
   color: #333;
-  padding: .5rem 1rem;
+  padding: 0.5rem 1rem;
 }
 
 #raihan {
   text-decoration: underline;
   color: #333;
+}
+
+/* TABLET AND SMARTPHONE */
+@media (max-width: 800px) {
+  #navbar {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1.5rem 0.3rem;
+  }
+
+  #navbar ul li {
+    padding: 1rem 1rem;
+  }
+
+  #features .feature {
+    flex-direction: column;
+  }
+
+  #features .feature div {
+    padding: 1rem;
+    margin: 0.5rem;
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+
+  #how-it-work {
+    padding: 1rem;
+  }
+
+  #how-it-work #video {
+    width: 80%;
+    height: 30%;
+  }
+
+  #pricing {
+    flex-direction: column;
+  }
+
+  #pricing .price-box {
+    margin: 1rem;
+  }
+
+  .price-box:first-child {
+    margin-right: 0;
+  }
+
+  .price-box:last-child {
+    margin-left: 0;
+  }
+
+  #main-footer {
+    padding: 2.5rem 0.5rem;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #main-footer .my-name {
+    margin: 1rem 0;
+  }
 }
